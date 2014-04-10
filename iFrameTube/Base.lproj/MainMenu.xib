@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="5053"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="iFrameTube" id="56">
+                    <menu key="submenu" title="iFrameTube" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About iFrameTube" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Preferences..." keyEquivalent="," id="Vj6-dN-rpT">
+                                <connections>
+                                    <action selector="makeKeyAndOrderFront:" target="6Yx-k1-imB" id="e2Z-8J-BGM"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit iFrameTube" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="83">
+                    <menu key="submenu" title="File" id="81">
+                        <items>
+                            <menuItem title="Paste" keyEquivalent="v" id="124">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="y66-eq-c79"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="SMd-7M-EGU">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="IyG-Z4-xNR"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="SelectID" keyEquivalent="z" id="yb8-oH-dVF">
+                                <connections>
+                                    <action selector="selectText:" target="Nmi-hM-pPq" id="igm-OO-Bsx"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="79">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Close" keyEquivalent="w" id="73">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="193"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="btn_Alwaysontop" destination="HKc-ue-xVK" id="1Ns-8J-Kji"/>
+                <outlet property="btn_Autoplay" destination="yU8-ID-TvF" id="Evw-BJ-rFE"/>
+                <outlet property="btn_Controls" destination="Vg0-pM-oYP" id="bbD-eS-caM"/>
+                <outlet property="btn_HTML" destination="0jq-cn-nAt" id="u6d-Mi-iQ5"/>
+                <outlet property="btn_Modest" destination="odp-mq-R6c" id="Hwd-zh-vhA"/>
+                <outlet property="btn_Related" destination="fle-kP-Yml" id="9TF-TB-LWq"/>
+                <outlet property="btn_Showinfo" destination="tay-0H-mYG" id="x1W-21-133"/>
+                <outlet property="currentID" destination="BQ2-2d-XFH" id="2iP-Ry-Lab"/>
+                <outlet property="videoText" destination="Nmi-hM-pPq" id="8vr-1o-nRv"/>
+                <outlet property="webView" destination="VaS-a2-8ZG" id="O5W-o7-Y0C"/>
+                <outlet property="win_Pref" destination="6Yx-k1-imB" id="fqt-Ha-fwI"/>
+                <outlet property="window" destination="KyY-9Q-Q3V" id="K2r-Be-3CU"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <window title="iFrameTube" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="KyY-9Q-Q3V">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="0.0" y="0.0" width="320" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <value key="minSize" type="size" width="320" height="270"/>
+            <value key="maxSize" type="size" width="320" height="270"/>
+            <view key="contentView" id="stG-bx-OqM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VaS-a2-8ZG">
+                        <rect key="frame" x="0.0" y="30" width="320" height="240"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                    </webView>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nmi-hM-pPq">
+                        <rect key="frame" x="4" y="4" width="100" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Video ID" bezelStyle="round" id="nN2-kO-pNf">
+                            <font key="font" size="13" name="HelveticaNeue"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="linkVideoID:" target="494" id="KMR-fa-xUv"/>
+                        </connections>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VlB-Zj-F1x">
+                        <rect key="frame" x="106" y="-2" width="40" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title=">" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fr1-Q7-bt0">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="linkVideoID:" target="494" id="P7d-5B-lhL"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQ2-2d-XFH">
+                        <rect key="frame" x="161" y="4" width="155" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" placeholderString="" id="4wH-rO-0l8">
+                            <font key="font" size="13" name="HelveticaNeue"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="6Yx-k1-imB" userLabel="Window - Preferences">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="131" y="159" width="151" height="173"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" id="6Jo-n8-4Fe">
+                <rect key="frame" x="0.0" y="0.0" width="151" height="173"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0jq-cn-nAt">
+                        <rect key="frame" x="18" y="137" width="66" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="HTML5" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nWt-aB-Ujh">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Pref_btn:" target="494" id="0zb-Zs-t5T"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fle-kP-Yml">
+                        <rect key="frame" x="18" y="37" width="69" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Related" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ylg-9K-0hl">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Pref_btn:" target="494" id="hxa-im-TuK"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tay-0H-mYG">
+                        <rect key="frame" x="18" y="77" width="80" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="ShowInfo" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="J6M-QH-ypC">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Pref_btn:" target="494" id="P4D-Vf-ZGv"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odp-mq-R6c">
+                        <rect key="frame" x="18" y="57" width="68" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Modest" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="j1A-gm-BIM">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Pref_btn:" target="494" id="Fec-ab-MaY"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKc-ue-xVK">
+                        <rect key="frame" x="18" y="17" width="115" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Always On Top" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="ASS-V0-pA5">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Pref_btn:" target="494" id="OPE-PD-jTQ"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vg0-pM-oYP">
+                        <rect key="frame" x="18" y="97" width="75" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Controls" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="n18-OU-8bq">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Pref_btn:" target="494" id="6HC-q4-N3z"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-ID-TvF">
+                        <rect key="frame" x="18" y="117" width="78" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Autoplay" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="7qs-kc-HOP">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="Pref_btn:" target="494" id="bbF-NM-hZ6"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
+    </objects>
+</document>

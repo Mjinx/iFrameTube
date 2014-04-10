@@ -1,0 +1,42 @@
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "iFrameTube"; ObjectID = "56"; */
+"56.title" = "iFrameTube";
+
+/* Class = "NSMenu"; title = "iFrameTube"; ObjectID = "57"; */
+"57.title" = "iFrameTube";
+
+/* Class = "NSMenuItem"; title = "About iFrameTube"; ObjectID = "58"; */
+"58.title" = "About iFrameTube";
+
+/* Class = "NSMenuItem"; title = "Open…"; ObjectID = "72"; */
+"72.title" = "Open…";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "73"; */
+"73.title" = "Close";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "81"; */
+"81.title" = "File";
+
+/* Class = "NSMenuItem"; title = "New"; ObjectID = "82"; */
+"82.title" = "New";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "83"; */
+"83.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Open Recent"; ObjectID = "124"; */
+"124.title" = "Open Recent";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "129"; */
+"129.title" = "Preferences…";
+
+/* Class = "NSMenuItem"; title = "Quit iFrameTube"; ObjectID = "136"; */
+"136.title" = "Quit iFrameTube";
+
+/* Class = "NSWindow"; title = "iFrameTube"; ObjectID = "371"; */
+"371.title" = "iFrameTube";
+
+/* Class = "NSButtonCell"; title = "Load"; ObjectID = "XEI-Mx-1IO"; */
+"XEI-Mx-1IO.title" = "Load";
